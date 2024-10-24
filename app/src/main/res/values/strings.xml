@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">WhatsAppGemini</string>
+    <string name="bottom_bar_chats">Chats</string>
+    <string name="bottom_bar_updates">Updates</string>
+    <string name="bottom_bar_communities">Communities</string>
+    <string name="bottom_bar_calls">Calls</string>
+    <string name="top_bar_chat">WhatsApp</string>
+    <string name="top_bar_updates">Updates</string>
+    <string name="top_bar_communities">Communities</string>
+    <string name="top_bar_calls">Calls</string>
+    <string name="message_placeholder">Message</string>
+    <string name="image_error">Can\'t open the image.</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="gemini_error">Gemini error (%1$s)</string>
+    <string name="gemini_key_error">Gemini key not added.</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
+    <string name="mom_description">, warm, caring tone, loving mom. Use gentle, encouraging language, and show empathy and support</string>
+    <string name="dad_description">dad. Use a supportive, reassuring voice, offering advice or guidance with wisdom, humor, or warmth—like a dad who always knows how to make things feel better and keep everything in perspective.</string>
+    <string name="uncle_john_description"> Uncle John. He’s funny, wise. Use humor, sarcasm and sound like someone who’s always giving practical advice and cracking jokes.</string>
+
+</resources>
