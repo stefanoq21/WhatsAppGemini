@@ -2,6 +2,7 @@ package com.stefanoq21.whatsappgemini.data.database
 
 import android.content.Context
 import com.stefanoq21.whatsappgemini.data.database.chat.ChatDetail
+import com.stefanoq21.whatsappgemini.data.database.contact.Contact
 import com.stefanoq21.whatsappgemini.data.database.message.Message
 import kotlinx.coroutines.flow.Flow
 
@@ -16,6 +17,10 @@ class MyDatabaseRepository(
 
     fun getChat(chatId: Long): Flow<ChatDetail?> {
         return bookDatabase.chatDao().detailById(chatId)
+    }
+
+    fun getContact(id: Long): Flow<Contact?> {
+        return bookDatabase.contactDao().contactById(id)
     }
 
     fun getMessages(chatId: Long): Flow<List<Message>> {

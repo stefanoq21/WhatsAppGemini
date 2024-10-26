@@ -1,6 +1,5 @@
 package com.stefanoq21.whatsappgemini.presentation.navigation
 
-import androidx.navigation.NavBackStackEntry
 import kotlinx.serialization.Serializable
 
 

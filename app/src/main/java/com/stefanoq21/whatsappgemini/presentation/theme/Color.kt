@@ -11,10 +11,6 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 
-
-
-
-
 val PrimaryContainer = Color(0xFF4A9F59)
 val OnPrimaryContainer = Color(0xFFFFFFFF)
 val OnSecondaryContainer = Color(0xFF2B5537)

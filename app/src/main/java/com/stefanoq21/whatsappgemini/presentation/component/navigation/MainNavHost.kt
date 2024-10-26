@@ -23,7 +23,7 @@ fun MainNavHost(
         modifier = modifier
     ) {
         composable<Screen.Home> {
-             HomeInitScreen()
+            HomeInitScreen()
         }
 
         composable<Screen.Chat> { backStackEntry ->

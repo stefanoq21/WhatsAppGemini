@@ -37,13 +37,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.stefanoq21.whatsappgemini.presentation.component.home.HomeTopBar
+import com.stefanoq21.whatsappgemini.presentation.navigation.BottomBarEnum
+import com.stefanoq21.whatsappgemini.presentation.navigation.NavigationEvent
+import com.stefanoq21.whatsappgemini.presentation.navigation.NavigationViewModel
 import com.stefanoq21.whatsappgemini.presentation.screen.home.calls.CallsScreen
 import com.stefanoq21.whatsappgemini.presentation.screen.home.chats.ChatsScreen
 import com.stefanoq21.whatsappgemini.presentation.screen.home.communities.CommunitiesScreen
 import com.stefanoq21.whatsappgemini.presentation.screen.home.updates.UpdatesScreen
-import com.stefanoq21.whatsappgemini.presentation.navigation.BottomBarEnum
-import com.stefanoq21.whatsappgemini.presentation.navigation.NavigationEvent
-import com.stefanoq21.whatsappgemini.presentation.navigation.NavigationViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
 

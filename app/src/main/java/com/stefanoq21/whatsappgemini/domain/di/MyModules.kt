@@ -6,6 +6,7 @@ import com.stefanoq21.whatsappgemini.data.database.MyDatabaseRepository
 import com.stefanoq21.whatsappgemini.presentation.navigation.NavigationViewModel
 import com.stefanoq21.whatsappgemini.presentation.screen.chat.ChatViewModel
 import com.stefanoq21.whatsappgemini.presentation.screen.home.chats.ChatsViewModel
+import com.stefanoq21.whatsappgemini.presentation.screen.home.updates.UpdatesViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
@@ -23,6 +24,8 @@ val myModules = module {
     viewModel {
         ChatViewModel(get(), get())
     }
-
+    viewModel {
+        UpdatesViewModel(get())
+    }
 
 }

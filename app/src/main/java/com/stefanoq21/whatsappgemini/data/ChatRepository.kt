@@ -36,7 +36,7 @@ class ChatRepository(
             apiKey = BuildConfig.API_KEY,
             // Set a system instruction to set the behavior of the model.
             systemInstruction = content {
-                text("Please respond to this chat conversation like a friendly ${contact?.description?: "person"}.")
+                text("Please respond to this chat conversation like a friendly ${contact?.description ?: "person"}.")
             },
         )
 
@@ -77,7 +77,7 @@ class ChatRepository(
             myDatabaseRepository.insertMessage(
                 chatId,
                 response,
-                contact?.id?: 0L,
+                contact?.id ?: 0L,
                 null,
                 null,
             )
@@ -88,7 +88,7 @@ class ChatRepository(
                 context.getString(
                     R.string.gemini_key_error
                 ) + " local",
-                contact?.id?: 0L,
+                contact?.id ?: 0L,
                 null,
                 null,
             )

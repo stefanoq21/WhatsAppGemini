@@ -49,7 +49,7 @@ fun ChatsInitScreen(
 
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(vertical= 12.dp),
+            contentPadding = PaddingValues(vertical = 12.dp),
         ) {
             items(chats) { chat ->
                 ChatsItem(

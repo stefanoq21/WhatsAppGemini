@@ -26,7 +26,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.stefanoq21.whatsappgemini.domain.utils.TimeDateUtils.toMessageListString
-import com.stefanoq21.whatsappgemini.presentation.component.ContactIcon
 import com.stefanoq21.whatsappgemini.presentation.screen.chat.ChatMessage
 
 

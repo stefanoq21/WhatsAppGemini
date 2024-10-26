@@ -1,4 +1,4 @@
-package com.stefanoq21.whatsappgemini.presentation.screen.home.chats
+package com.stefanoq21.whatsappgemini.presentation.screen.home.updates
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,16 +6,16 @@ import com.stefanoq21.whatsappgemini.data.database.MyDatabaseRepository
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 
-class ChatsViewModel(
+class UpdatesViewModel(
     private val myDatabaseRepository: MyDatabaseRepository,
 ) : ViewModel() {
 
-    val chats = myDatabaseRepository
-        .getChats()
+    val contact = myDatabaseRepository
+        .getContact(0L)
         .stateIn(
             viewModelScope,
             SharingStarted.WhileSubscribed(5000L),
-            emptyList(),
+            null,
         )
 
 }
