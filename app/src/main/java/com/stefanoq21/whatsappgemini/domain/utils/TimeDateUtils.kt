@@ -37,13 +37,19 @@ object TimeDateUtils {
         }
     }
 
+    /**
+     * Converts a Long representing a timestamp (in milliseconds) to a formatted string suitable for display
+     * in a message bubble, representing the time.
+     *
+     * If the input Long is null, an empty string is returned.
+     *
+     * @return A formatted string representing the time in the format "HH:mm" (24-hour format),
+     *         or an empty string if the input is null.
+     */
     fun Long?.toMessageBubbleString(): String {
         if (this == null) return ""
-
         val currentDate = Date(this)
-
         return SimpleDateFormat("kk:mm", Locale.getDefault()).format(currentDate)
-
     }
 
 

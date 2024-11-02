@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinParcelize)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.secretPlugin)
-
+    alias(libs.plugins.screenshot)
 }
 
 secrets {
@@ -69,6 +69,8 @@ android {
             excludes += "/META-INF/*"
         }
     }
+
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
 
 dependencies {
@@ -164,4 +166,5 @@ dependencies {
     testImplementation(libs.koin.test.junit4)
     androidTestImplementation(libs.androidx.room.testing)
 
+    screenshotTestImplementation(libs.androidx.ui.tooling)
 }

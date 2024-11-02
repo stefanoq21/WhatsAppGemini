@@ -33,8 +33,7 @@ adaptiveNavigationAndroid = "1.0.0"
 browser = "1.8.0"
 generativeai = "0.9.0"
 secretPlugin="2.0.1"
-
-
+screenshot = "0.0.1-alpha07"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -102,3 +101,4 @@ firebaseCrashlytics = { id = "com.google.firebase.crashlytics", version.ref = "f
 jetbrainsKotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 secretPlugin = {id= "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretPlugin" }
+screenshot = { id = "com.android.compose.screenshot", version.ref = "screenshot"}

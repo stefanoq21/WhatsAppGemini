@@ -16,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.stefanoq21.whatsappgemini.presentation.component.ContactIcon
 import com.stefanoq21.whatsappgemini.presentation.screen.chat.HeaderInfo
@@ -61,3 +62,17 @@ fun ChatTopBar(
     )
 }
 
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Preview
+@Composable
+fun ChatTopBarPreview() {
+    ChatTopBar(
+        headerInfo = HeaderInfo(
+            text = "John Doe",
+            icon = "example_icon_url",
+            isGroup = false
+        ),
+        onBackPressed = { }
+    )
+}
