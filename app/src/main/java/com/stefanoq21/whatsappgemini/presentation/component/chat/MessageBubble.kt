@@ -63,7 +63,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlin.math.roundToInt
 
 
-
 enum class SwipeToReplyValue { Resting, Replying, ReplyValue }
 
 @OptIn(ExperimentalLayoutApi::class, ExperimentalFoundationApi::class)
@@ -281,8 +280,7 @@ fun MessageBubblePrew() {
 }
 
 class WhatsAppBubbleShape(
-    private
-    val cornerRadius: Float,
+    private val cornerRadius: Float,
     private val tailWidth: Float,
     private val tailHeight: Float,
     private val isIncoming: Boolean
