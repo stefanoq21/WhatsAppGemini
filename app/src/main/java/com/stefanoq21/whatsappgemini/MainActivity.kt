@@ -21,7 +21,6 @@ import com.stefanoq21.whatsappgemini.presentation.component.navigation.MainNavHo
 import com.stefanoq21.whatsappgemini.presentation.navigation.NavigationEvent
 import com.stefanoq21.whatsappgemini.presentation.navigation.NavigationViewModel
 import com.stefanoq21.whatsappgemini.presentation.theme.WhatsAppGeminiTheme
-import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
 
 class MainActivity : ComponentActivity() {
@@ -31,42 +30,41 @@ class MainActivity : ComponentActivity() {
 
         enableEdgeToEdge()
         setContent {
-            KoinAndroidContext {
-                WhatsAppGeminiTheme {
+            WhatsAppGeminiTheme {
 
-                    val navigationViewModel = koinViewModel<NavigationViewModel>()
+                val navigationViewModel = koinViewModel<NavigationViewModel>()
 
-                    val navController = rememberNavController()
-                    val backstackEntry = navController.currentBackStackEntryAsState()
+                val navController = rememberNavController()
+                val backstackEntry = navController.currentBackStackEntryAsState()
 
-                    navigationViewModel.onEvent(
-                        NavigationEvent.OnSetContent(
-                            activityNavController = navController,
-                            //backstackEntry.value?.toRoute<Screen?>() ?: Screen.Home
-                        ) { onBackPressedDispatcher.onBackPressed() })
+                navigationViewModel.onEvent(
+                    NavigationEvent.OnSetContent(
+                        activityNavController = navController,
+                        //backstackEntry.value?.toRoute<Screen?>() ?: Screen.Home
+                    ) { onBackPressedDispatcher.onBackPressed() })
 
-                    ChangeSystemBarsTheme(
-                        lightTheme = !isSystemInDarkTheme(),
+                ChangeSystemBarsTheme(
+                    lightTheme = !isSystemInDarkTheme(),
+                )
+
+                Surface(
+                    modifier = Modifier
+                        .fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    MainNavHost(
+                        modifier = Modifier.padding(/*innerPadding*/),
                     )
-
-                    Surface(
-                        modifier = Modifier
-                            .fillMaxSize(),
-                        color = MaterialTheme.colorScheme.background
-                    ) {
-                        MainNavHost(
-                            modifier = Modifier.padding(/*innerPadding*/),
-                        )
-                        /*Scaffold(
-                        snackbarHost = {
-                            SnackbarHost(hostState = navigationViewModel.snackBarHostState)
-                        }
-                    ) { innerPadding ->
-
-                    }*/
+                    /*Scaffold(
+                    snackbarHost = {
+                        SnackbarHost(hostState = navigationViewModel.snackBarHostState)
                     }
+                ) { innerPadding ->
+
+                }*/
                 }
             }
+
         }
     }
 

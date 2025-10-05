@@ -31,7 +31,7 @@ class ChatRepository(
 
         // Create a generative AI Model to interact with the Gemini API.
         val generativeModel = GenerativeModel(
-            modelName = "gemini-1.5-flash",
+            modelName = "gemini-2.5-flash",
             // Set your Gemini API in as an `API_KEY` variable in your local.properties file
             apiKey = BuildConfig.API_KEY,
             // Set a system instruction to set the behavior of the model.

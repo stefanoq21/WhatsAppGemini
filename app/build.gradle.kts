@@ -17,12 +17,12 @@ secrets {
 
 android {
     namespace = "com.stefanoq21.whatsappgemini"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.stefanoq21.whatsappgemini"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0.0"
 
@@ -160,7 +160,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.mockk.android)
-    testImplementation(libs.mockk)
+    androidTestImplementation(libs.mockk.agent)
+    testImplementation(libs.mockk.android)
+    testImplementation(libs.mockk.agent)
     testImplementation(libs.ktor.client.mock)
     testImplementation(libs.koin.test)
     testImplementation(libs.koin.test.junit4)
