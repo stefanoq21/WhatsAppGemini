@@ -1,6 +1,5 @@
 package com.stefanoq21.whatsappgemini.presentation.screen.chat
 
-import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,6 +12,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.compose.dropUnlessResumed
 import com.stefanoq21.whatsappgemini.presentation.component.chat.ChatTopBar
@@ -27,7 +27,7 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun ChatInitScreen(
     chatId: Long,
-    navigationViewModel: NavigationViewModel = koinViewModel(viewModelStoreOwner = LocalContext.current as ComponentActivity),
+    navigationViewModel: NavigationViewModel = koinViewModel(viewModelStoreOwner = LocalContext.current as ViewModelStoreOwner),
     chatViewModel: ChatViewModel = koinViewModel(),
 ) {
 

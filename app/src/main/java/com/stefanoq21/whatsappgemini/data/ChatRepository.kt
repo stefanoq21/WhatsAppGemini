@@ -11,6 +11,7 @@ import com.stefanoq21.whatsappgemini.R
 import com.stefanoq21.whatsappgemini.data.database.MyDatabaseRepository
 import com.stefanoq21.whatsappgemini.data.database.contact.Contact
 import com.stefanoq21.whatsappgemini.presentation.screen.chat.ChatMessage
+import androidx.core.net.toUri
 
 class ChatRepository(
     private val myDatabaseRepository: MyDatabaseRepository,
@@ -52,7 +53,7 @@ class ChatRepository(
             var response = try {
                 if (mediaMimeType?.contains("image") == true) {
                     context.contentResolver.openInputStream(
-                        Uri.parse(mediaUri),
+                        mediaUri!!.toUri(),
                     ).use {
                         if (it != null) {
                             chat.sendMessage(BitmapFactory.decodeStream(it)).text?.trim() ?: "..."

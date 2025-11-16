@@ -26,6 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.stefanoq21.whatsappgemini.data.database.contact.Contact
 import com.stefanoq21.whatsappgemini.presentation.component.ContactIcon
@@ -37,7 +38,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun UpdatesScreen(
-    navigationViewModel: NavigationViewModel = koinViewModel(viewModelStoreOwner = LocalContext.current as ComponentActivity),
+    navigationViewModel: NavigationViewModel = koinViewModel(viewModelStoreOwner = LocalContext.current as ViewModelStoreOwner),
     updatesViewModel: UpdatesViewModel = koinViewModel(),
 ) {
     val contact by updatesViewModel.contact.collectAsStateWithLifecycle()

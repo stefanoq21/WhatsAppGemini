@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.stefanoq21.whatsappgemini.data.database.chat.ChatDetail
 import com.stefanoq21.whatsappgemini.presentation.component.home.chats.ChatsItem
@@ -20,7 +21,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun ChatsScreen(
-    navigationViewModel: NavigationViewModel = koinViewModel(viewModelStoreOwner = LocalContext.current as ComponentActivity),
+    navigationViewModel: NavigationViewModel = koinViewModel(viewModelStoreOwner = LocalContext.current as ViewModelStoreOwner),
     chatsViewModel: ChatsViewModel = koinViewModel(),
 ) {
     val chats by chatsViewModel.chats.collectAsStateWithLifecycle()

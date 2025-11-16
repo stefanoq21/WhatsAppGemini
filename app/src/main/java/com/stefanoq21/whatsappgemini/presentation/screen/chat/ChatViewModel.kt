@@ -44,7 +44,7 @@ class ChatViewModel(
                 val showIcon = chat?.attendees?.size?.takeIf { it > 1 } != null
                 val iconUri =
                     if (showIcon)
-                        chat?.attendees?.firstOrNull { it.id == message.senderId }?.icon
+                        chat.attendees.firstOrNull { it.id == message.senderId }?.icon
                     else null
                 add(
                     ChatMessage(
