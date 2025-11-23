@@ -129,12 +129,12 @@ dependencies {
 
 
     //Ktor HttpClient
-   /* implementation(libs.ktor.client.core)
-    implementation(libs.ktor.client.android)
-    implementation(libs.ktor.client.content.negotiation)
-    implementation(libs.ktor.serialization.kotlinx.json)
-    implementation(libs.ktor.client.logging)
-    debugImplementation(libs.slf4j.simple)*/
+    /* implementation(libs.ktor.client.core)
+     implementation(libs.ktor.client.android)
+     implementation(libs.ktor.client.content.negotiation)
+     implementation(libs.ktor.serialization.kotlinx.json)
+     implementation(libs.ktor.client.logging)
+     debugImplementation(libs.slf4j.simple)*/
 
     //Json serialization kotlin
     implementation(libs.kotlinx.serialization.json)
@@ -168,5 +168,6 @@ dependencies {
     testImplementation(libs.koin.test.junit4)
     androidTestImplementation(libs.androidx.room.testing)
 
+    screenshotTestImplementation(libs.screenshot.validation.api)
     screenshotTestImplementation(libs.androidx.ui.tooling)
 }

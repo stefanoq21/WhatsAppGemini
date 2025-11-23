@@ -33,14 +33,11 @@ class MainActivity : ComponentActivity() {
             WhatsAppGeminiTheme {
 
                 val navigationViewModel = koinViewModel<NavigationViewModel>()
-
                 val navController = rememberNavController()
-                val backstackEntry = navController.currentBackStackEntryAsState()
 
                 navigationViewModel.onEvent(
                     NavigationEvent.OnSetContent(
                         activityNavController = navController,
-                        //backstackEntry.value?.toRoute<Screen?>() ?: Screen.Home
                     ) { onBackPressedDispatcher.onBackPressed() })
 
                 ChangeSystemBarsTheme(
@@ -55,13 +52,6 @@ class MainActivity : ComponentActivity() {
                     MainNavHost(
                         modifier = Modifier.padding(/*innerPadding*/),
                     )
-                    /*Scaffold(
-                    snackbarHost = {
-                        SnackbarHost(hostState = navigationViewModel.snackBarHostState)
-                    }
-                ) { innerPadding ->
-
-                }*/
                 }
             }
 
